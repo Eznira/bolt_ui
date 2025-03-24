@@ -74,6 +74,43 @@ class _PaymentState extends State<Payment> {
                     ),
                   ),
                 ),
+                Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                      ),
+                      child: Icon(
+                        Icons.contact_support_outlined,
+                        size: 20,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Text(
+                      "What is Bolt balance?",
+                      style: AppTextStyle.body4,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: 20,
+                      ),
+                      child: Icon(
+                        Icons.query_builder_outlined,
+                        size: 20,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Text(
+                      "See Bolt balance transaction?",
+                      style: AppTextStyle.body4,
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -94,7 +131,7 @@ class _PaymentState extends State<Payment> {
                     style: AppTextStyle.title1,
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 13,
@@ -108,8 +145,8 @@ class _PaymentState extends State<Payment> {
                     children: [
                       Row(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 8),
                             child: Icon(Icons.money),
                           ),
                           Text(
@@ -118,8 +155,13 @@ class _PaymentState extends State<Payment> {
                           ),
                         ],
                       ),
-                      Row(
-                        children: [Icon(Icons.radio_button_checked_sharp)],
+                      const Row(
+                        children: [
+                          Icon(
+                            Icons.radio_button_on,
+                            color: Colors.green,
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -151,14 +193,14 @@ class _PaymentState extends State<Payment> {
           Expanded(
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12),
                 ),
               ),
-              child: Column(
+              child: const Column(
                 children: [
                   Row(
                     children: [

@@ -1,4 +1,4 @@
-import 'package:bolt_ui/screens/payment.dart';
+import 'package:bolt_ui/screens/profile/update_phone_number.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       darkTheme: darkMode,
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeProvider>(context).currentTheme,
-      home: const Payment(),
+      home: const UpdatePhoneNumber(),
     );
   }
 }

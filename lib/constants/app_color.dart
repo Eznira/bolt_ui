@@ -9,7 +9,7 @@ class AppColors {
 
 class AppTextStyle {
   static final title1 = TextStyle(
-    color: Colors.grey.shade800,
+    color: Colors.grey.shade900,
     fontWeight: FontWeight.w700,
     fontSize: 20,
   );
