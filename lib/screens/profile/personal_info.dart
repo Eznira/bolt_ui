@@ -78,7 +78,7 @@ class PersonalInfo extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                       ),
                       child: Icon(
@@ -97,7 +97,7 @@ class PersonalInfo extends StatelessWidget {
                   onPressed: () {
                     // TODO: route to edit
                   },
-                  child: Text(
+                  child: const Text(
                     'Edit',
                     style: TextStyle(color: Colors.green),
                   ),
@@ -123,7 +123,7 @@ class PersonalInfo extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                       ),
                       child: Icon(
@@ -142,7 +142,7 @@ class PersonalInfo extends StatelessWidget {
                   onPressed: () {
                     // TODO: route to edit
                   },
-                  child: Text(
+                  child: const Text(
                     'Edit',
                     style: TextStyle(color: Colors.green),
                   ),

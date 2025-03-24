@@ -1,4 +1,5 @@
 import 'package:bolt_ui/constants/app_color.dart';
+import 'package:bolt_ui/widgets/custom_form_field.dart';
 import 'package:flutter/material.dart';
 
 class UpdatePhoneNumber extends StatefulWidget {
@@ -37,6 +38,9 @@ class _UpdateInfoState extends State<UpdatePhoneNumber> {
               style: AppTextStyle.title1,
             ),
           ),
+          const SizedBox(
+            height: 10,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 12,
@@ -44,6 +48,127 @@ class _UpdateInfoState extends State<UpdatePhoneNumber> {
             child: Text(
               "We'll send a code for verification",
               style: AppTextStyle.body1,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 8,
+              horizontal: 14,
+            ),
+            child: Row(
+              children: [
+                Container(
+                  height: 50,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade400,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(Icons.flag),
+                      const Text("+234"),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.arrow_drop_down_circle_outlined),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  width: 12,
+                ),
+                Expanded(
+                  child: Container(
+                    height: 50,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: CustomFormField(
+                      labelText: "Phone number",
+                      controller: _phoneNumberController,
+                      focusNode: _phoneNumberFocusNode,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                      ),
+                      child: Icon(
+                        Icons.phone_android,
+                        size: 20,
+                        color: Colors.grey.shade700,
+                      ),
+                    ),
+                    Text(
+                      "+23408078140648",
+                      style: AppTextStyle.body1,
+                    ),
+                  ],
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.radio_button_on,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: SizedBox(
+              height: 4,
+              child: Divider(
+                height: 4,
+                color: Colors.grey.shade700,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                      ),
+                      child: Icon(
+                        Icons.email_outlined,
+                        size: 20,
+                        color: Colors.grey.shade700,
+                      ),
+                    ),
+                    Text(
+                      "ihimarinze@gmail.com",
+                      style: AppTextStyle.body1,
+                    ),
+                  ],
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.radio_button_on,
+                    color: AppColors.green,
+                  ),
+                ),
+              ],
             ),
           ),
           const Spacer(),
@@ -78,7 +203,7 @@ class _UpdateInfoState extends State<UpdatePhoneNumber> {
           ),
           const SizedBox(
             height: 10,
-          )
+          ),
         ],
       ),
     );
