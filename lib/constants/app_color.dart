@@ -51,4 +51,9 @@ class AppTextStyle {
     fontWeight: FontWeight.normal,
     fontSize: 13,
   );
+  static final body5 = TextStyle(
+    color: Colors.green,
+    fontWeight: FontWeight.normal,
+    fontSize: 14,
+  );
 }

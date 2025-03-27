@@ -1,7 +1,10 @@
+import 'package:bolt_ui/screens/about/about.dart';
 import 'package:bolt_ui/screens/home_screen.dart';
-import 'package:bolt_ui/screens/my_trips.dart';
-import 'package:bolt_ui/screens/payment.dart';
+import 'package:bolt_ui/screens/my_rides/my_trips.dart';
+import 'package:bolt_ui/screens/payment/payment.dart';
 import 'package:bolt_ui/screens/profile/profile.dart';
+import 'package:bolt_ui/screens/promotions/promotions.dart';
+import 'package:bolt_ui/screens/support/support.dart';
 import 'package:bolt_ui/screens/work_profile/work_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -39,11 +42,11 @@ class MyApp extends StatelessWidget {
       routes: {
         "/profile": (context) => const Profile(),
         "/payment": (context) => const Payment(),
-        "/promotions": (context) => const Payment(),
+        "/promotions": (context) => const Promotions(),
         "/my_rides": (context) => const MyTrips(),
         "/work_profile": (context) => const WorkProfile(),
-        "/support": (context) => const Payment(),
-        "/about": (context) => const Payment(),
+        "/support": (context) => const Support(),
+        "/about": (context) => const About(),
       },
     );
   }

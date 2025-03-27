@@ -19,19 +19,21 @@ class MyDrawer extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.fromLTRB(8, 20, 8, 10),
-              child: ListTile(
-                style: ListTileStyle.drawer,
-                subtitleTextStyle: TextStyle(color: Colors.green),
-                leading: const Icon(
-                  Icons.account_circle_rounded,
-                  size: 42,
+              child: Material(
+                child: ListTile(
+                  style: ListTileStyle.drawer,
+                  subtitleTextStyle: const TextStyle(color: Colors.green),
+                  leading: const Icon(
+                    Icons.account_circle_rounded,
+                    size: 42,
+                  ),
+                  title: const Text('Arinze'),
+                  subtitle: const Text('My acount'),
+                  onTap: () {
+                    Navigator.pop(context); // Close the drawer
+                    Navigator.pushNamed(context, "/profile");
+                  },
                 ),
-                title: const Text('Arinze'),
-                subtitle: const Text('My acount'),
-                onTap: () {
-                  Navigator.pop(context); // Close the drawer
-                  Navigator.pushNamed(context, "/profile");
-                },
               ),
             ),
           ),
@@ -45,54 +47,69 @@ class MyDrawer extends StatelessWidget {
             ),
             child: Column(
               children: [
-                ListTile(
-                  leading: const Icon(Icons.account_balance_wallet_outlined),
-                  title: const Text('Payment'),
-                  onTap: () {
-                    Navigator.pop(context); // Close the drawer
-                    Navigator.pushNamed(context, "/payment");
-                  },
+                Material(
+                  child: ListTile(
+                    leading: const Icon(Icons.account_balance_wallet_outlined),
+                    title: const Text('Payment'),
+                    onTap: () {
+                      Navigator.pop(context); // Close the drawer
+                      Navigator.pushNamed(context, "/payment");
+                    },
+                  ),
                 ),
-                ListTile(
-                  leading: const Icon(Icons.label_important_outline),
-                  title: const Text('Promotions'),
-                  subtitle: const Text('Enter promo code'),
-                  onTap: () {
-                    // Handle navigation to profile
-                    Navigator.pop(context); // Close the drawer
-                  },
+                Material(
+                  child: ListTile(
+                    leading: const Icon(Icons.label_important_outline),
+                    title: const Text('Promotions'),
+                    subtitle: const Text('Enter promo code'),
+                    onTap: () {
+                      // Handle navigation to profile
+                      Navigator.pop(context); // Close the drawer
+                      Navigator.pushNamed(context, "/promotions");
+                    },
+                  ),
                 ),
-                ListTile(
-                  leading: const Icon(Icons.query_builder_outlined),
-                  title: const Text('My Rides'),
-                  onTap: () {
-                    Navigator.pop(context); // Close the drawer
-                    Navigator.pushNamed(context, "/my_rides");
-                  },
+                Material(
+                  child: ListTile(
+                    leading: const Icon(Icons.query_builder_outlined),
+                    title: const Text('My Rides'),
+                    onTap: () {
+                      Navigator.pop(context); // Close the drawer
+                      Navigator.pushNamed(context, "/my_rides");
+                    },
+                  ),
                 ),
-                ListTile(
-                  leading: const Icon(Icons.shopping_bag_outlined),
-                  title: const Text('Work Profile'),
-                  onTap: () {
-                    Navigator.pop(context); // Close the drawer
-                    Navigator.pushNamed(context, "/work_profile");
-                  },
+                Material(
+                  child: ListTile(
+                    leading: const Icon(Icons.shopping_bag_outlined),
+                    title: const Text('Work Profile'),
+                    onTap: () {
+                      Navigator.pop(context); // Close the drawer
+                      Navigator.pushNamed(context, "/work_profile");
+                    },
+                  ),
                 ),
-                ListTile(
-                  leading: const Icon(Icons.contact_support_outlined),
-                  title: const Text('Support'),
-                  onTap: () {
-                    // Handle navigation to settings
-                    Navigator.pop(context); // Close the drawer
-                  },
+                Material(
+                  child: ListTile(
+                    leading: const Icon(Icons.contact_support_outlined),
+                    title: const Text('Support'),
+                    onTap: () {
+                      // Handle navigation to settings
+                      Navigator.pop(context); // Close the drawer
+                      Navigator.pushNamed(context, "/support");
+                    },
+                  ),
                 ),
-                ListTile(
-                  leading: const Icon(Icons.info_outline_rounded),
-                  title: const Text('About'),
-                  onTap: () {
-                    // Handle navigation to settings
-                    Navigator.pop(context); // Close the drawer
-                  },
+                Material(
+                  child: ListTile(
+                    leading: const Icon(Icons.info_outline_rounded),
+                    title: const Text('About'),
+                    onTap: () {
+                      // Handle navigation to settings
+                      Navigator.pop(context); // Close the drawer
+                      Navigator.pushNamed(context, "/about");
+                    },
+                  ),
                 ),
               ],
             ),

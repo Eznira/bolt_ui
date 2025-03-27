@@ -1,7 +1,7 @@
 import 'package:bolt_ui/widgets/my_toggle_switch.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/app_color.dart';
+import '../../constants/app_color.dart';
 
 class Payment extends StatefulWidget {
   const Payment({super.key});
