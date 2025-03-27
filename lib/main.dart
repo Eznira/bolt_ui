@@ -1,4 +1,8 @@
-import 'package:bolt_ui/screens/profile/update_phone_number.dart';
+import 'package:bolt_ui/screens/home_screen.dart';
+import 'package:bolt_ui/screens/my_trips.dart';
+import 'package:bolt_ui/screens/payment.dart';
+import 'package:bolt_ui/screens/profile/profile.dart';
+import 'package:bolt_ui/screens/work_profile/work_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -31,7 +35,16 @@ class MyApp extends StatelessWidget {
       darkTheme: darkMode,
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeProvider>(context).currentTheme,
-      home: const UpdatePhoneNumber(),
+      home: const HomeScreen(),
+      routes: {
+        "/profile": (context) => const Profile(),
+        "/payment": (context) => const Payment(),
+        "/promotions": (context) => const Payment(),
+        "/my_rides": (context) => const MyTrips(),
+        "/work_profile": (context) => const WorkProfile(),
+        "/support": (context) => const Payment(),
+        "/about": (context) => const Payment(),
+      },
     );
   }
 }

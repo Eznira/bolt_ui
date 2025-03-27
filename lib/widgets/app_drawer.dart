@@ -10,8 +10,8 @@ class MyDrawer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.surface,
+            decoration: const BoxDecoration(
+              color: Colors.white,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(12),
                 bottomLeft: Radius.circular(12),
@@ -20,17 +20,19 @@ class MyDrawer extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(8, 20, 8, 10),
               child: ListTile(
-                  leading: Icon(
-                    Icons.account_circle_rounded,
-                    size: 42,
-                  ),
-                  title: Text('Arinze'),
-                  subtitle: Text('My acount'),
-                  onTap: () {
-                    // TODO: Route to profile page
-                    // Handle navigation to messages
-                    //Navigator.pop(context); // Close the drawer
-                  }),
+                style: ListTileStyle.drawer,
+                subtitleTextStyle: TextStyle(color: Colors.green),
+                leading: const Icon(
+                  Icons.account_circle_rounded,
+                  size: 42,
+                ),
+                title: const Text('Arinze'),
+                subtitle: const Text('My acount'),
+                onTap: () {
+                  Navigator.pop(context); // Close the drawer
+                  Navigator.pushNamed(context, "/profile");
+                },
+              ),
             ),
           ),
           const SizedBox(
@@ -47,8 +49,8 @@ class MyDrawer extends StatelessWidget {
                   leading: const Icon(Icons.account_balance_wallet_outlined),
                   title: const Text('Payment'),
                   onTap: () {
-                    // Handle navigation to messages
                     Navigator.pop(context); // Close the drawer
+                    Navigator.pushNamed(context, "/payment");
                   },
                 ),
                 ListTile(
@@ -64,16 +66,16 @@ class MyDrawer extends StatelessWidget {
                   leading: const Icon(Icons.query_builder_outlined),
                   title: const Text('My Rides'),
                   onTap: () {
-                    // Handle navigation to settings
                     Navigator.pop(context); // Close the drawer
+                    Navigator.pushNamed(context, "/my_rides");
                   },
                 ),
                 ListTile(
                   leading: const Icon(Icons.shopping_bag_outlined),
                   title: const Text('Work Profile'),
                   onTap: () {
-                    // Handle navigation to settings
                     Navigator.pop(context); // Close the drawer
+                    Navigator.pushNamed(context, "/work_profile");
                   },
                 ),
                 ListTile(
@@ -102,7 +104,7 @@ class MyDrawer extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.surface,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(12),
                   topLeft: Radius.circular(12),
                 ),

@@ -1,3 +1,6 @@
+import 'package:bolt_ui/screens/profile/upadate_email.dart';
+import 'package:bolt_ui/screens/profile/update_name.dart';
+import 'package:bolt_ui/screens/profile/update_phone_number.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_color.dart';
@@ -51,8 +54,14 @@ class PersonalInfo extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     // TODO: route to edit
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const UpdateName(),
+                      ),
+                    );
                   },
-                  child: Text(
+                  child: const Text(
                     'Edit',
                     style: TextStyle(color: Colors.green),
                   ),
@@ -96,6 +105,12 @@ class PersonalInfo extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     // TODO: route to edit
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const UpdatePhoneNumber(),
+                      ),
+                    );
                   },
                   child: const Text(
                     'Edit',
@@ -141,6 +156,12 @@ class PersonalInfo extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     // TODO: route to edit
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const UpdateEmail(),
+                      ),
+                    );
                   },
                   child: const Text(
                     'Edit',

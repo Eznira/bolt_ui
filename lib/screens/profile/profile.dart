@@ -1,4 +1,5 @@
 import 'package:bolt_ui/constants/app_color.dart';
+import 'package:bolt_ui/screens/profile/personal_info.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatefulWidget {
@@ -30,10 +31,18 @@ class _ProfileState extends State<Profile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      BackButton(),
+                      const BackButton(),
                       TextButton(
-                        onPressed: () {},
-                        child: Text(
+                        onPressed: () {
+                          // rooue to edit personal info
+
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const PersonalInfo()),
+                          );
+                        },
+                        child: const Text(
                           'Edit Profile',
                           style: TextStyle(
                             color: Colors.green,
