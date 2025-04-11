@@ -89,13 +89,13 @@ class _SupportState extends State<Support> {
                   "Oct 28, 8:05 PM",
                   style: AppTextStyle.body2,
                 ),
-                trailing: Text(
+                trailing: const Text(
                   "Failed",
                   style: AppTextStyle.body4,
                 )),
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: const Divider(color: Colors.grey),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Divider(color: Colors.grey),
             ),
             ListTile(
               leading: CircleAvatar(
@@ -118,8 +118,8 @@ class _SupportState extends State<Support> {
                 style: AppTextStyle.body1,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
+            const Padding(
+              padding: EdgeInsets.symmetric(
                 vertical: 2,
                 horizontal: 12,
               ),
@@ -140,7 +140,7 @@ class _SupportState extends State<Support> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Container(
+              child: SizedBox(
                 height: 30,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -164,12 +164,12 @@ class _SupportState extends State<Support> {
               ),
             ),
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: const Divider(color: Colors.grey),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Divider(color: Colors.grey),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Container(
+              child: SizedBox(
                 height: 30,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -193,12 +193,12 @@ class _SupportState extends State<Support> {
               ),
             ),
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: const Divider(color: Colors.grey),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Divider(color: Colors.grey),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Container(
+              child: SizedBox(
                 height: 30,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -222,12 +222,12 @@ class _SupportState extends State<Support> {
               ),
             ),
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: const Divider(color: Colors.grey),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Divider(color: Colors.grey),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Container(
+              child: SizedBox(
                 height: 30,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -251,12 +251,12 @@ class _SupportState extends State<Support> {
               ),
             ),
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: const Divider(color: Colors.grey),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Divider(color: Colors.grey),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Container(
+              child: SizedBox(
                 height: 30,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -280,12 +280,12 @@ class _SupportState extends State<Support> {
               ),
             ),
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: const Divider(color: Colors.grey),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Divider(color: Colors.grey),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Container(
+              child: SizedBox(
                 height: 30,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

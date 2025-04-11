@@ -1,25 +1,25 @@
 import 'package:bolt_ui/constants/app_color.dart';
 import 'package:flutter/material.dart';
 
-class CustomFormField extends StatefulWidget {
-  final String labelText;
+class CustomFormField2 extends StatefulWidget {
+  final String hintText;
   final TextEditingController controller;
   final FocusNode focusNode;
   final FocusNode? nextFocusNode;
 
-  const CustomFormField({
+  const CustomFormField2({
     super.key,
-    required this.labelText,
+    required this.hintText,
     required this.controller,
     required this.focusNode,
     this.nextFocusNode,
   });
 
   @override
-  State<CustomFormField> createState() => _CustomFormFieldState();
+  State<CustomFormField2> createState() => _CustomFormField2State();
 }
 
-class _CustomFormFieldState extends State<CustomFormField> {
+class _CustomFormField2State extends State<CustomFormField2> {
   bool _showSuffixIcon = false;
 
   void _updateSuffixIcon() {
@@ -51,8 +51,8 @@ class _CustomFormFieldState extends State<CustomFormField> {
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.grey.shade300,
-        labelText: widget.labelText,
-        labelStyle: AppTextStyle.body3,
+        hintText: widget.hintText,
+        hintStyle: AppTextStyle.body3,
         suffixIcon: _showSuffixIcon
             ? IconButton(
                 onPressed: () {

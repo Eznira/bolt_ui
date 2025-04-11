@@ -59,7 +59,7 @@ class _ProfileState extends State<Profile> {
                     color: Colors.grey.shade500,
                     borderRadius: BorderRadius.circular(60),
                   ),
-                  child: Icon(Icons.person),
+                  child: const Icon(Icons.person),
                 ),
                 Column(
                   children: [
@@ -74,7 +74,7 @@ class _ProfileState extends State<Profile> {
                   ],
                 ),
                 const Padding(
-                  padding: const EdgeInsets.symmetric(
+                  padding: EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 14,
                   ),

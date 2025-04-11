@@ -46,12 +46,12 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
     fontSize: 14,
   );
-  static final body4 = TextStyle(
+  static const body4 = TextStyle(
     color: Colors.black,
     fontWeight: FontWeight.normal,
     fontSize: 13,
   );
-  static final body5 = TextStyle(
+  static const body5 = TextStyle(
     color: Colors.green,
     fontWeight: FontWeight.normal,
     fontSize: 14,

@@ -36,7 +36,7 @@ class PersonalInfo extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                       ),
                       child: Icon(

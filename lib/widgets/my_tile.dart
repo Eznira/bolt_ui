@@ -25,7 +25,7 @@ class MyTile extends StatelessWidget {
                       borderRadius: BorderRadius.circular(40),
                       color: Colors.grey.shade200,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.car_crash_outlined,
                     ),
                   ),

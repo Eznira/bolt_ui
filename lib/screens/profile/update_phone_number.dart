@@ -67,11 +67,11 @@ class _UpdateInfoState extends State<UpdatePhoneNumber> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.flag),
+                      const Icon(Icons.flag),
                       const Text("+234"),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.arrow_drop_down_circle_outlined),
+                        icon: const Icon(Icons.arrow_drop_down_circle_outlined),
                       ),
                     ],
                   ),

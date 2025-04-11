@@ -65,7 +65,7 @@ class _PaymentState extends State<Payment> {
                             height: 20,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Bolt balance is not available with this"
                           "payment method",
                           style: AppTextStyle.body4,
@@ -74,9 +74,9 @@ class _PaymentState extends State<Payment> {
                     ),
                   ),
                 ),
-                Row(
+                const Row(
                   children: [
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 20,
                       ),
@@ -92,9 +92,9 @@ class _PaymentState extends State<Payment> {
                     ),
                   ],
                 ),
-                Row(
+                const Row(
                   children: [
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 8,
                         horizontal: 20,
@@ -132,7 +132,7 @@ class _PaymentState extends State<Payment> {
                   ),
                 ),
                 const Padding(
-                  padding: const EdgeInsets.symmetric(
+                  padding: EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 13,
                   ),
@@ -175,7 +175,7 @@ class _PaymentState extends State<Payment> {
                 const Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(
+                      padding: EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 10,
                       ),
@@ -205,7 +205,7 @@ class _PaymentState extends State<Payment> {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(
+                        padding: EdgeInsets.symmetric(
                           horizontal: 20,
                           vertical: 10,
                         ),

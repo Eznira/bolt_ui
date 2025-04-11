@@ -16,7 +16,7 @@ class _MyTripsState extends State<MyTrips> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          BackButton(),
+          const BackButton(),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
@@ -24,7 +24,7 @@ class _MyTripsState extends State<MyTrips> {
               style: AppTextStyle.title1,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -44,7 +44,7 @@ class _MyTripsState extends State<MyTrips> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Expanded(
@@ -64,11 +64,11 @@ class _MyTripsState extends State<MyTrips> {
                       const SizedBox(
                         height: 12,
                       ),
-                      MyTile(),
-                      MyTile(),
-                      MyTile(),
-                      MyTile(),
-                      MyTile(),
+                      const MyTile(),
+                      const MyTile(),
+                      const MyTile(),
+                      const MyTile(),
+                      const MyTile(),
                       Padding(
                         padding: const EdgeInsets.only(left: 10),
                         child: Text(
@@ -79,11 +79,11 @@ class _MyTripsState extends State<MyTrips> {
                       const SizedBox(
                         height: 12,
                       ),
-                      MyTile(),
-                      MyTile(),
-                      MyTile(),
-                      MyTile(),
-                      MyTile(),
+                      const MyTile(),
+                      const MyTile(),
+                      const MyTile(),
+                      const MyTile(),
+                      const MyTile(),
                     ],
                   ),
                 ),
