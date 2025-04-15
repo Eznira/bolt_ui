@@ -1,6 +1,7 @@
 import 'package:bolt_ui/constants/app_color.dart';
 import 'package:bolt_ui/widgets/custom_form_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UpdatePhoneNumber extends StatefulWidget {
   const UpdatePhoneNumber({super.key});
@@ -58,20 +59,29 @@ class _UpdateInfoState extends State<UpdatePhoneNumber> {
             child: Row(
               children: [
                 Container(
-                  height: 50,
-                  width: 120,
+                  height: 50.h,
+                  width: 120.w,
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade400,
+                    color: Colors.grey.shade300,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Icon(Icons.flag),
-                      const Text("+234"),
+                      Icon(
+                        Icons.flag,
+                        size: 28.r,
+                      ),
+                      Text(
+                        "+234",
+                        style: AppTextStyle.body1,
+                      ),
                       IconButton(
                         onPressed: () {},
-                        icon: const Icon(Icons.arrow_drop_down_circle_outlined),
+                        icon: Icon(
+                          Icons.arrow_drop_down_circle_outlined,
+                          size: 28.r,
+                        ),
                       ),
                     ],
                   ),
@@ -81,8 +91,8 @@ class _UpdateInfoState extends State<UpdatePhoneNumber> {
                 ),
                 Expanded(
                   child: Container(
-                    height: 50,
-                    width: 120,
+                    height: 50.h,
+                    width: 120.w,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                     ),

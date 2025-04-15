@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/app_color.dart';
 
@@ -48,7 +49,10 @@ class _PromotionsState extends State<Promotions> {
                   child: Material(
                     child: ListTile(
                       onTap: () {},
-                      leading: const Icon(Icons.tag),
+                      leading: Icon(
+                        Icons.tag,
+                        size: 28.sp,
+                      ),
                       title: Text(
                         "Enter promo code",
                         style: AppTextStyle.title3,
@@ -92,7 +96,7 @@ class _PromotionsState extends State<Promotions> {
                             BorderRadius.circular(4), // Adjust the curve here
                       ),
                       color: Colors.purple.shade400,
-                      child: const Padding(
+                      child: Padding(
                         padding: EdgeInsets.all(10.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -105,9 +109,8 @@ class _PromotionsState extends State<Promotions> {
                                   children: [
                                     Text(
                                       "20% off on 5 rides",
-                                      style: TextStyle(
+                                      style: AppTextStyle.title3.copyWith(
                                         color: Colors.white,
-                                        fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                   ],
@@ -115,14 +118,14 @@ class _PromotionsState extends State<Promotions> {
                                 Icon(
                                   Icons.settings_suggest,
                                   color: Colors.white,
+                                  size: 24.sp,
                                 ),
                               ],
                             ),
                             Text(
                               "Maximum promo #2000",
-                              style: TextStyle(
+                              style: AppTextStyle.body3.copyWith(
                                 color: Colors.white,
-                                fontWeight: FontWeight.normal,
                               ),
                             ),
                             Divider(
@@ -140,19 +143,72 @@ class _PromotionsState extends State<Promotions> {
                                     ),
                                     Text(
                                       "Applied",
-                                      style: TextStyle(
+                                      style: AppTextStyle.body3.copyWith(
                                         color: Colors.white,
-                                        fontWeight: FontWeight.normal,
                                       ),
                                     ),
                                   ],
                                 ),
                                 Text(
                                   "2 days left",
-                                  style: TextStyle(
+                                  style: AppTextStyle.body3.copyWith(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.normal,
                                   ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 6,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(4), // Adjust the curve here
+                      ),
+                      color: AppColors.grey3,
+                      child: Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "20% off on 5 rides",
+                                      style: AppTextStyle.title3,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Text(
+                              "Maximum promo #2000",
+                              style: AppTextStyle.body3,
+                            ),
+                            Divider(
+                              color: Colors.white,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      "Applied",
+                                      style: AppTextStyle.body3,
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),

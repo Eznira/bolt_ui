@@ -5,6 +5,7 @@ import 'package:bolt_ui/utils/util.dart';
 import 'package:bolt_ui/widgets/app_drawer.dart';
 import 'package:bolt_ui/widgets/custom_form_feild2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -150,7 +151,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                             height: 50,
                                             child: ListTile(
                                               leading: Icon(
-                                                  Icons.local_offer_outlined),
+                                                Icons.local_offer_outlined,
+                                                size: 22.r,
+                                              ),
                                               title: Text(
                                                 "Promotions",
                                                 style: AppTextStyle.body1,
@@ -172,8 +175,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                           child: SizedBox(
                                             height: 50,
                                             child: ListTile(
-                                              leading: const Icon(
-                                                  Icons.card_giftcard_outlined),
+                                              leading: Icon(
+                                                Icons.card_giftcard_outlined,
+                                                size: 22.r,
+                                              ),
                                               title: Text(
                                                 "Vouchers",
                                                 style: AppTextStyle.body1,

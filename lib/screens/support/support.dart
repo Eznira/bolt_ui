@@ -89,7 +89,7 @@ class _SupportState extends State<Support> {
                   "Oct 28, 8:05 PM",
                   style: AppTextStyle.body2,
                 ),
-                trailing: const Text(
+                trailing: Text(
                   "Failed",
                   style: AppTextStyle.body4,
                 )),
@@ -118,8 +118,8 @@ class _SupportState extends State<Support> {
                 style: AppTextStyle.body1,
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(
+            Padding(
+              padding: const EdgeInsets.symmetric(
                 vertical: 2,
                 horizontal: 12,
               ),
