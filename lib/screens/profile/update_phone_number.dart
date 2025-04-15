@@ -25,194 +25,213 @@ class _UpdateInfoState extends State<UpdatePhoneNumber> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Stack(
         children: [
-          const BackButton(),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 8,
-              horizontal: 12,
-            ),
-            child: Text(
-              "Update your name",
-              style: AppTextStyle.title1,
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 12,
-            ),
-            child: Text(
-              "We'll send a code for verification",
-              style: AppTextStyle.body1,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 8,
-              horizontal: 14,
-            ),
-            child: Row(
-              children: [
-                Container(
-                  height: 50.h,
-                  width: 120.w,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade300,
-                    borderRadius: BorderRadius.circular(8),
+          Positioned.fill(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const BackButton(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 8.sp,
+                      horizontal: 12.sp,
+                    ),
+                    child: Text(
+                      "Update your phone number",
+                      style: AppTextStyle.title1,
+                    ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Icon(
-                        Icons.flag,
-                        size: 28.r,
-                      ),
-                      Text(
-                        "+234",
-                        style: AppTextStyle.body1,
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.arrow_drop_down_circle_outlined,
-                          size: 28.r,
+                  SizedBox(
+                    height: 10.sp,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 12.sp,
+                    ),
+                    child: Text(
+                      "We'll send a code for verification",
+                      style: AppTextStyle.body1,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 8.sp,
+                      horizontal: 12.sp,
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 50.sp,
+                          width: 120.sp,
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade300,
+                            borderRadius: BorderRadius.circular(12.sp),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(
+                                Icons.flag,
+                                size: 28.sp,
+                              ),
+                              Text(
+                                "+234",
+                                style: AppTextStyle.body1,
+                              ),
+                              IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.arrow_drop_down_circle_outlined,
+                                  size: 28.sp,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
+                        SizedBox(
+                          width: 12.sp,
+                        ),
+                        Expanded(
+                          child: Container(
+                            height: 50.sp,
+                            width: 120.sp,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.sp),
+                            ),
+                            child: CustomFormField(
+                              labelText: "Phone number",
+                              controller: _phoneNumberController,
+                              focusNode: _phoneNumberFocusNode,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 6.sp),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 20.sp,
+                              ),
+                              child: Icon(
+                                Icons.phone_android,
+                                size: 20.sp,
+                                color: Colors.grey.shade700,
+                              ),
+                            ),
+                            Text(
+                              "+23408078140648",
+                              style: AppTextStyle.body1,
+                            ),
+                          ],
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.radio_button_on,
+                            size: 24.sp, // Added size for the icon
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.sp),
+                    child: SizedBox(
+                      height: 4.sp,
+                      child: Divider(
+                        height: 4.sp,
+                        color: Colors.grey.shade700,
                       ),
-                    ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 6.sp),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 20.sp,
+                              ),
+                              child: Icon(
+                                Icons.email_outlined,
+                                size: 20.sp,
+                                color: Colors.grey.shade700,
+                              ),
+                            ),
+                            Text(
+                              "ihimarinze@gmail.com",
+                              style: AppTextStyle.body1,
+                            ),
+                          ],
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.radio_button_on,
+                            color: AppColors.green,
+                            size: 24.sp, // Added size for the icon
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 80.sp,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 10.sp,
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 12.sp,
+                  ),
+                  child: Text(
+                    "Bolt will not send anything without"
+                    "your consent.",
+                    style: AppTextStyle.body2,
                   ),
                 ),
-                const SizedBox(
-                  width: 12,
-                ),
-                Expanded(
+                Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 16.sp, vertical: 4.sp),
                   child: Container(
-                    height: 50.h,
-                    width: 120.w,
+                    height: 40.sp,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
+                      color: AppColors.green,
+                      borderRadius: BorderRadius.circular(20.sp),
                     ),
-                    child: CustomFormField(
-                      labelText: "Phone number",
-                      controller: _phoneNumberController,
-                      focusNode: _phoneNumberFocusNode,
+                    child: Center(
+                      child: Text(
+                        "Continue",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.normal),
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 6),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                      ),
-                      child: Icon(
-                        Icons.phone_android,
-                        size: 20,
-                        color: Colors.grey.shade700,
-                      ),
-                    ),
-                    Text(
-                      "+23408078140648",
-                      style: AppTextStyle.body1,
-                    ),
-                  ],
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.radio_button_on,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: SizedBox(
-              height: 4,
-              child: Divider(
-                height: 4,
-                color: Colors.grey.shade700,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 6),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                      ),
-                      child: Icon(
-                        Icons.email_outlined,
-                        size: 20,
-                        color: Colors.grey.shade700,
-                      ),
-                    ),
-                    Text(
-                      "ihimarinze@gmail.com",
-                      style: AppTextStyle.body1,
-                    ),
-                  ],
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.radio_button_on,
-                    color: AppColors.green,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const Spacer(),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 12,
-            ),
-            child: Text(
-              "Bolt will not send anything without"
-              "your consent.",
-              style: AppTextStyle.body2,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            child: Container(
-              height: 40,
-              decoration: BoxDecoration(
-                color: AppColors.green,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: const Center(
-                child: Text(
-                  "Continue",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
           ),
         ],
       ),

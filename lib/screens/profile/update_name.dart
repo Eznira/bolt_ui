@@ -28,9 +28,9 @@ class _UpdateNameState extends State<UpdateName> {
                 children: [
                   const BackButton(),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 8,
-                      horizontal: 12,
+                    padding: EdgeInsets.symmetric(
+                      vertical: 8.h,
+                      horizontal: 12.w,
                     ),
                     child: Text(
                       "Update your name",
@@ -38,8 +38,8 @@ class _UpdateNameState extends State<UpdateName> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 12.w,
                     ),
                     child: Text(
                       "Please enter your name as it appers"
@@ -48,7 +48,7 @@ class _UpdateNameState extends State<UpdateName> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: EdgeInsets.all(10.sp),
                     child: SizedBox(
                       height: 50.sp,
                       child: CustomFormField(
@@ -60,7 +60,7 @@ class _UpdateNameState extends State<UpdateName> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: EdgeInsets.all(10.sp),
                     child: SizedBox(
                       height: 50.sp,
                       child: CustomFormField(
@@ -77,14 +77,14 @@ class _UpdateNameState extends State<UpdateName> {
           Positioned(
             left: 0,
             right: 0,
-            bottom: 10.sp,
+            bottom: 10.h,
             child: Padding(
               padding: EdgeInsets.all(10.sp),
               child: Container(
                 height: 40.sp,
                 decoration: BoxDecoration(
                   color: AppColors.green,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                 ),
                 child: Center(
                   child: Text(
