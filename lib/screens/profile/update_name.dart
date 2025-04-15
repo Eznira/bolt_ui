@@ -1,6 +1,7 @@
 import 'package:bolt_ui/constants/app_color.dart';
 import 'package:bolt_ui/widgets/custom_form_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UpdateName extends StatefulWidget {
   const UpdateName({super.key});
@@ -18,69 +19,84 @@ class _UpdateNameState extends State<UpdateName> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Stack(
         children: [
-          const BackButton(),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 8,
-              horizontal: 12,
-            ),
-            child: Text(
-              "Update your name",
-              style: AppTextStyle.title1,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 12,
-            ),
-            child: Text(
-              "Please enter your name as it appers"
-              "on your ID or passport.",
-              style: AppTextStyle.body1,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: CustomFormField(
-              labelText: "First name",
-              controller: _firstName,
-              focusNode: _firstNameFocusNode,
-              nextFocusNode: _lastNameFocusNode,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: CustomFormField(
-              labelText: "Last name",
-              controller: _lastName,
-              focusNode: _lastNameFocusNode,
-            ),
-          ),
-          const Spacer(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Container(
-              height: 40,
-              decoration: BoxDecoration(
-                color: AppColors.green,
-                borderRadius: BorderRadius.circular(20),
+          Positioned.fill(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const BackButton(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 8,
+                      horizontal: 12,
+                    ),
+                    child: Text(
+                      "Update your name",
+                      style: AppTextStyle.title1,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                    ),
+                    child: Text(
+                      "Please enter your name as it appers"
+                      "on your ID or passport.",
+                      style: AppTextStyle.body1,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: SizedBox(
+                      height: 50.sp,
+                      child: CustomFormField(
+                        labelText: "First name",
+                        controller: _firstName,
+                        focusNode: _firstNameFocusNode,
+                        nextFocusNode: _lastNameFocusNode,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: SizedBox(
+                      height: 50.sp,
+                      child: CustomFormField(
+                        labelText: "Last name",
+                        controller: _lastName,
+                        focusNode: _lastNameFocusNode,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              child: const Center(
-                child: Text(
-                  "Done",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal),
+            ),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 10.sp,
+            child: Padding(
+              padding: EdgeInsets.all(10.sp),
+              child: Container(
+                height: 40.sp,
+                decoration: BoxDecoration(
+                  color: AppColors.green,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: Text(
+                    "Done",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.normal),
+                  ),
                 ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 30,
           )
         ],
       ),
