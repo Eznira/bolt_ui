@@ -18,7 +18,7 @@ class _WorkProfileState extends State<WorkProfile> {
         children: [
           Positioned.fill(
             child: Container(
-              color: Colors.grey.shade400,
+              color: AppColors.grey3,
             ),
           ),
           CustomScrollView(

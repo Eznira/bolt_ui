@@ -14,7 +14,7 @@ class _PromotionsState extends State<Promotions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: AppColors.grey3,
         body: CustomScrollView(
           slivers: [
             SliverList(

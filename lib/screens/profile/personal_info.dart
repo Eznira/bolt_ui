@@ -2,6 +2,7 @@ import 'package:bolt_ui/screens/profile/upadate_email.dart';
 import 'package:bolt_ui/screens/profile/update_name.dart';
 import 'package:bolt_ui/screens/profile/update_phone_number.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/app_color.dart';
 
@@ -61,9 +62,9 @@ class PersonalInfo extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     'Edit',
-                    style: TextStyle(color: Colors.green),
+                    style: TextStyle(color: Colors.green, fontSize: 16.sp),
                   ),
                 ),
               ],
@@ -112,9 +113,9 @@ class PersonalInfo extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     'Edit',
-                    style: TextStyle(color: Colors.green),
+                    style: TextStyle(color: Colors.green, fontSize: 16.sp),
                   ),
                 ),
               ],
@@ -163,9 +164,9 @@ class PersonalInfo extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     'Edit',
-                    style: TextStyle(color: Colors.green),
+                    style: TextStyle(color: Colors.green, fontSize: 16.sp),
                   ),
                 ),
               ],

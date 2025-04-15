@@ -15,7 +15,7 @@ class _PaymentState extends State<Payment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: AppColors.grey3,
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(
@@ -117,8 +117,8 @@ class _PaymentState extends State<Payment> {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 6,
+                SizedBox(
+                  height: 6.sp,
                 ),
                 Container(
                   width: double.infinity,
@@ -205,8 +205,8 @@ class _PaymentState extends State<Payment> {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 6,
+                SizedBox(
+                  height: 6.sp,
                 ),
               ],
             ),
