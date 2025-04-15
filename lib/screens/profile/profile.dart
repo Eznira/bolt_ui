@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/app_color.dart';
+import '../../widgets/custom_list_tile.dart'; // Import the custom widget
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -30,15 +31,13 @@ class _ProfileState extends State<Profile> {
                     Material(
                       color: Colors.white,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        padding: EdgeInsets.symmetric(horizontal: 4.sp),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const BackButton(),
                             TextButton(
                               onPressed: () {
-                                // rooue to edit personal info
-
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -71,16 +70,17 @@ class _ProfileState extends State<Profile> {
                             height: 20,
                           ),
                           Container(
-                            height: 40,
-                            width: 40,
+                            height: 40.sp,
+                            width: 40.sp,
                             decoration: BoxDecoration(
                               color: AppColors.grey3,
-                              borderRadius: BorderRadius.circular(40),
+                              borderRadius: BorderRadius.circular(40.sp),
                             ),
                             child: Icon(
                               Icons.person,
                               color: AppColors.grey2,
-                            ), // Changed to outlined
+                              size: 28.sp,
+                            ),
                           ),
                           Column(
                             children: [
@@ -96,15 +96,15 @@ class _ProfileState extends State<Profile> {
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 14,
+                              horizontal: 20.sp,
+                              vertical: 14.sp,
                             ),
                             child: Row(
                               children: [
                                 Icon(
-                                  Icons.email_outlined, // Changed to outlined
+                                  Icons.email_outlined,
                                   color: AppColors.grey2,
-                                  size: 28.r,
+                                  size: 28.sp,
                                 ),
                                 const SizedBox(
                                   width: 10,
@@ -119,216 +119,103 @@ class _ProfileState extends State<Profile> {
                         ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 4,
-                    ),
+                    SizedBox(height: 4.sp),
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.sp),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 4,
-                              horizontal: 12,
+                            padding: EdgeInsets.symmetric(
+                              vertical: 4.sp,
+                              horizontal: 12.sp,
                             ),
                             child: Text(
                               "Saved places",
                               style: AppTextStyle.title1,
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 8,
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.home_outlined, // Changed to outlined
-                                  color: AppColors.grey2,
-                                  size: 28.r,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Home",
-                                      style: AppTextStyle.body1,
-                                    ),
-                                    Text(
-                                      "ABC Transport Jibowu Terminal, 22 ...",
-                                      style: AppTextStyle.body2,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
+                          CustomProfileListTile(
+                            leadingIcon: Icons.home_outlined,
+                            title: "Home",
+                            subtitle: "ABC Transport Jibowu Terminal, 22 ...",
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            padding: EdgeInsets.symmetric(horizontal: 20.sp),
                             child: SizedBox(
-                              height: 4,
+                              height: 4.sp,
                               child: Divider(
-                                height: 4,
+                                height: 4.sp,
                                 color: Colors.grey.shade700,
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 8,
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.shop_outlined, // Changed to outlined
-                                  color: AppColors.grey2,
-                                  size: 28.r,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  "Enter work location",
-                                  style: AppTextStyle.body1,
-                                ),
-                              ],
-                            ),
+                          CustomProfileListTile(
+                            leadingIcon: Icons.shop_outlined,
+                            title: "Enter work location",
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            padding: EdgeInsets.symmetric(horizontal: 20.sp),
                             child: SizedBox(
-                              height: 4,
+                              height: 4.sp,
                               child: Divider(
-                                height: 4,
+                                height: 4.sp,
                                 color: Colors.grey.shade700,
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 8,
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.add_outlined, // Changed to outlined
-                                  color: AppColors.grey2,
-                                  size: 28.r,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  "Add a place",
-                                  style: AppTextStyle.body1,
-                                ),
-                              ],
-                            ),
+                          CustomProfileListTile(
+                            leadingIcon: Icons.add_outlined,
+                            title: "Add a place",
                           ),
                         ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 4,
-                    ),
+                    SizedBox(height: 4.sp),
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.sp),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 4,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 12.sp,
+                              vertical: 4.sp,
                             ),
                             child: Text(
                               "More",
                               style: AppTextStyle.title1,
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 8,
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.language_outlined,
-                                  color: AppColors.grey2,
-                                  size: 28.r,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Language",
-                                      style: AppTextStyle.body1,
-                                    ),
-                                    Text(
-                                      "English - GB",
-                                      style: AppTextStyle.body2,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
+                          CustomProfileListTile(
+                            leadingIcon: Icons.language_outlined,
+                            title: "Language",
+                            subtitle: "English - GB",
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            padding: EdgeInsets.symmetric(horizontal: 20.sp),
                             child: SizedBox(
-                              height: 4,
+                              height: 4.sp,
                               child: Divider(
-                                height: 4,
+                                height: 4.sp,
                                 color: Colors.grey.shade700,
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 8,
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons
-                                      .announcement_outlined, // Changed to outlined
-                                  color: AppColors.grey2,
-                                  size: 28.r,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  "Community preferences",
-                                  style: AppTextStyle.body1,
-                                ),
-                              ],
-                            ),
+                          CustomProfileListTile(
+                            leadingIcon: Icons.announcement_outlined,
+                            title: "Community preferences",
                           ),
                         ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 4,
-                    ),
+                    SizedBox(height: 4.sp),
                     Container(
                       decoration: const BoxDecoration(
                         color: Colors.white,
@@ -341,68 +228,32 @@ class _ProfileState extends State<Profile> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 4,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 12.sp,
+                              vertical: 4.sp,
                             ),
                             child: Text(
                               "Account",
                               style: AppTextStyle.title1,
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 8,
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.logout_outlined, // Changed to outlined
-                                  color: AppColors.grey2,
-                                  size: 28.r,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  "Log out",
-                                  style: AppTextStyle.body1,
-                                ),
-                              ],
-                            ),
+                          CustomProfileListTile(
+                            leadingIcon: Icons.logout_outlined,
+                            title: "Log out",
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            padding: EdgeInsets.symmetric(horizontal: 20.sp),
                             child: SizedBox(
-                              height: 4,
+                              height: 4.sp,
                               child: Divider(
-                                height: 4,
+                                height: 4.sp,
                                 color: Colors.grey.shade700,
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 8,
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.delete_outline, // Changed to outlined
-                                  color: AppColors.grey2,
-                                  size: 28.r,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  "Delete account",
-                                  style: AppTextStyle.body1,
-                                ),
-                              ],
-                            ),
+                          CustomProfileListTile(
+                            leadingIcon: Icons.delete_outline,
+                            title: "Delete account",
                           ),
                         ],
                       ),
@@ -413,7 +264,7 @@ class _ProfileState extends State<Profile> {
               SliverFillRemaining(
                 hasScrollBody: false,
                 child: Container(
-                  height: 20.r,
+                  height: 20.sp,
                   width: double.infinity,
                   color: Colors.white,
                 ),
