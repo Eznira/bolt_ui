@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/app_color.dart';
-import '../../widgets/custom_list_tile.dart'; // Import the custom widget
+import '../../widgets/custom_list_tile.dart';
+import 'custom_bottom_sheet.dart'; // Import the custom widget
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -13,6 +14,34 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  void _showBottomSheet(BuildContext context, Widget widget) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(12.r)),
+      ),
+      builder: (BuildContext bc) {
+        return widget;
+      },
+    );
+  }
+
+  void showHomeBottomSheet() => _showBottomSheet(
+        context,
+        const CustomBottomSheet(
+            title: "Home",
+            subtitle: "ABC Transport Jibowu "
+                "Terminal, 22 Ikorodu Road, Ikeja"),
+      );
+
+  void showWorkBottomSheet() => _showBottomSheet(
+      context,
+      const CustomBottomSheet(
+        title: "Work",
+        subtitle: "General Hospital Lagos, Lagos Island",
+      ));
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -142,6 +171,9 @@ class _ProfileState extends State<Profile> {
                             leadingIcon: Icons.home_outlined,
                             title: "Home",
                             subtitle: "ABC Transport Jibowu Terminal, 22 ...",
+                            navigateTo: () {
+                              showHomeBottomSheet();
+                            },
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 20.sp),
@@ -156,6 +188,9 @@ class _ProfileState extends State<Profile> {
                           CustomProfileListTile(
                             leadingIcon: Icons.shop_outlined,
                             title: "Enter work location",
+                            navigateTo: () {
+                              showWorkBottomSheet();
+                            },
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 20.sp),
@@ -170,6 +205,7 @@ class _ProfileState extends State<Profile> {
                           CustomProfileListTile(
                             leadingIcon: Icons.add_outlined,
                             title: "Add a place",
+                            navigateTo: () {},
                           ),
                         ],
                       ),
@@ -197,6 +233,7 @@ class _ProfileState extends State<Profile> {
                             leadingIcon: Icons.language_outlined,
                             title: "Language",
                             subtitle: "English - GB",
+                            navigateTo: () {},
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 20.sp),
@@ -211,6 +248,7 @@ class _ProfileState extends State<Profile> {
                           CustomProfileListTile(
                             leadingIcon: Icons.announcement_outlined,
                             title: "Community preferences",
+                            navigateTo: () {},
                           ),
                         ],
                       ),
@@ -240,6 +278,7 @@ class _ProfileState extends State<Profile> {
                           CustomProfileListTile(
                             leadingIcon: Icons.logout_outlined,
                             title: "Log out",
+                            navigateTo: () {},
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 20.sp),
@@ -254,6 +293,7 @@ class _ProfileState extends State<Profile> {
                           CustomProfileListTile(
                             leadingIcon: Icons.delete_outline,
                             title: "Delete account",
+                            navigateTo: () {},
                           ),
                         ],
                       ),

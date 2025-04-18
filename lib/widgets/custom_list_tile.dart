@@ -8,14 +8,14 @@ class CustomProfileListTile extends StatefulWidget {
   final IconData leadingIcon;
   final String title;
   final String? subtitle;
-  final Widget? navigateTo;
+  final VoidCallback navigateTo;
 
   const CustomProfileListTile({
     super.key,
     required this.leadingIcon,
     required this.title,
+    required this.navigateTo,
     this.subtitle,
-    this.navigateTo,
   });
 
   @override
@@ -31,14 +31,7 @@ class _CustomProfileListTileState extends State<CustomProfileListTile> {
       onEnter: (event) => setState(() => _isHovering = true),
       onExit: (event) => setState(() => _isHovering = false),
       child: InkWell(
-        onTap: widget.navigateTo != null
-            ? () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => widget.navigateTo!),
-                );
-              }
-            : null,
+        onTap: widget.navigateTo,
         child: Container(
           color: _isHovering ? Colors.grey.shade200 : Colors.white,
           padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 8.sp),
