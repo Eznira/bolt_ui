@@ -4,7 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/app_color.dart';
 import '../../widgets/custom_list_tile.dart';
-import 'custom_bottom_sheet.dart'; // Import the custom widget
+import 'custom_bottom_sheet.dart';
+import 'delete_account.dart'; // Import the custom widget
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -293,7 +294,10 @@ class _ProfileState extends State<Profile> {
                           CustomProfileListTile(
                             leadingIcon: Icons.delete_outline,
                             title: "Delete account",
-                            navigateTo: () {},
+                            navigateTo: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (builder) => DeleteAccount()));
+                            },
                           ),
                         ],
                       ),
