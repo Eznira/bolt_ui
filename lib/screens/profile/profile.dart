@@ -5,7 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/app_color.dart';
 import '../../widgets/custom_list_tile.dart';
 import 'custom_bottom_sheet.dart';
-import 'delete_account.dart'; // Import the custom widget
+import 'delete_account.dart';
+import 'new_place.dart'; // Import the custom widget
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -206,7 +207,13 @@ class _ProfileState extends State<Profile> {
                           CustomProfileListTile(
                             leadingIcon: Icons.add_outlined,
                             title: "Add a place",
-                            navigateTo: () {},
+                            navigateTo: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => NewPlaceScreen()),
+                              );
+                            },
                           ),
                         ],
                       ),
