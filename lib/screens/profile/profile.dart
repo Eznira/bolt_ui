@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/app_color.dart';
 import '../../widgets/custom_list_tile.dart';
+import '../../widgets/logout_confirmation_dialog.dart';
 import 'custom_bottom_sheet.dart';
 import 'delete_account.dart';
 import 'new_place.dart'; // Import the custom widget
@@ -43,6 +44,10 @@ class _ProfileState extends State<Profile> {
         title: "Work",
         subtitle: "General Hospital Lagos, Lagos Island",
       ));
+
+  void _onLogoutTap() {
+    showLogoutConfirmationDialog(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -211,7 +216,7 @@ class _ProfileState extends State<Profile> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => NewPlaceScreen()),
+                                    builder: (context) => NewPlace()),
                               );
                             },
                           ),
@@ -286,7 +291,9 @@ class _ProfileState extends State<Profile> {
                           CustomProfileListTile(
                             leadingIcon: Icons.logout_outlined,
                             title: "Log out",
-                            navigateTo: () {},
+                            navigateTo: () {
+                              _onLogoutTap();
+                            },
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 20.sp),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class NewPlaceScreen extends StatefulWidget {
-  const NewPlaceScreen({super.key});
+class NewPlace extends StatefulWidget {
+  const NewPlace({super.key});
 
   @override
-  State<NewPlaceScreen> createState() => _NewPlaceScreenState();
+  State<NewPlace> createState() => _NewPlaceState();
 }
 
-class _NewPlaceScreenState extends State<NewPlaceScreen> {
+class _NewPlaceState extends State<NewPlace> {
   final TextEditingController _searchController = TextEditingController();
   final FocusNode _searchFocusNode = FocusNode();
 
